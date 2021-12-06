@@ -47,11 +47,6 @@ enum class RallyScreen(
         body = { BillsBody(UserData.bills) }
     );
 
-    @Composable
-    fun content(onScreenChange: (String) -> Unit) {
-        body(onScreenChange)
-    }
-
     companion object {
         fun fromRoute(route: String?): RallyScreen =
             when (route?.substringBefore("/")) {
